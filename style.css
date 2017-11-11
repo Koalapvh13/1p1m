@@ -1,0 +1,52 @@
+#cant{
+    float: left;
+    background-color: #63177a;/*roxo*/
+    height: 1550px;
+    width: 250px;
+    border: dashed;
+    padding-left: 0px;
+    padding: 5px;
+    left:10px;
+    top:20px;
+    z-index:1;
+    overflow: auto;
+
+}
+.over{
+    overflow: hidden;
+    width: 1050px;
+    background-color: #ff0000;
+}
+.form{
+    float: right;
+    column-count: 3;
+    background-color: #f48024;/*laranja*/
+    padding: 15px;
+    height: 1550px;
+    width: 730px;
+    border: solid;
+}
+
+.cantor{
+    border: solid;
+    margin-bottom: 5px;
+    padding: 15px;
+    background-color: #0095ff; /*blue*/
+    width: 200px;
+
+}
+.cantor img{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#gs {
+    column-count: 4;
+    margin-left: 270px;
+    position: absolute;
+    width: 680px;
+    height: 900px;
+}
+div a img{
+    display: none;
+}
