@@ -27,11 +27,6 @@ $conta = count($letra)-1;*/
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .dada{
-            height: 800px;
-            width: 600px;
-            column-count: 1;
-        }
         div a img{
             display: none;
         }
@@ -40,10 +35,18 @@ $conta = count($letra)-1;*/
 <body>
 <?php
 
+$str = $_POST['lyri'];
 
-echo "<h1>";
-echo $_POST['rad'];
-echo "</h1>";
+$alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
+$json = json_decode($alb);
+$i=0;
+
+    $aka = $json->mus[0]->text;
+
+
+
+echo $aka;
+
 
 ?>
 
