@@ -35,10 +35,22 @@ $conta = count($letra)-1;*/
 <body>
 <?php
 
+$str = $_POST['lyri'];
 
-echo "<h1>";
-echo $_POST['lyri'];
-echo "</h1>";
+$alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
+$json = json_decode($alb);
+$i=0;
+
+    $aka = $json->mus[0]->text;
+
+$q = str_replace('<br/>',' ',$aka);
+$a = array(",",".","!","?",";","(",")","...","\"","-","","  ");
+$q = str_replace($a," ",$q);
+$q = explode(' ',$q);
+
+echo '<pre>';
+print_r($q);
+
 
 ?>
 

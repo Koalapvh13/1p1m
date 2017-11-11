@@ -61,10 +61,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
  function df() {
+     document.fx.submit();
     document.getElementById('b').click();
  }
 </script>
-<form action="recebe.php" method="post" target="mod">
+<form action="recebe.php" name="fx" method="post" target="mod">
 
     <label for="rad">Forever:
         <input type="radio" name="rad" id="rad" onclick="df()" value="pain of my life"> 55scape

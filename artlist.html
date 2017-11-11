@@ -83,8 +83,8 @@
 
         if(!selecionado){
 
-            $(".form").empty();
-            var id = document.getElementsByClassName("list1")
+            $("#canti").empty();
+            var id = document.getElementsByClassName("list1");
                 for(i=0;i < id.length;i++){
                     if (id[i].checked){
                         var c = id[i].value + "index.js";
@@ -100,18 +100,18 @@
                         var musicas = [];
                         for(i=0;i< ly.length;i++){
 
-                            musicas.push("<input type='radio' class='let' onclick='sa();df()' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
+                            musicas.push("<input type='radio' class='let' onclick='sa();df();env()' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
 
                         }
-                        $("<div/>",{"id":"playlist", html: musicas.join("") }).appendTo(".form");
+                        $("<div/>",{"id":"playlist", html: musicas.join("") }).appendTo("#canti");
                     }
 
             );
 
-        }else {$(".form").empty();}}
+        }else {$("#canti").empty();}}
 
     function sa() {
-        var id = document.getElementsByClassName("let")
+        var id = document.getElementsByClassName("let");
         for(i=0;i < id.length;i++){
             if (id[i].checked){
             var c = id[i].value;
@@ -129,19 +129,22 @@
     }
 
 </script>
-
+<!--- Conteudo total --->
 <div class="over">
-
+    <!--- recebe a lista de musicas --->
 <div class="form">
 
+    <!--- lista de musicas --->
+    <div id="gs" style="margin-left: 0px">
+        <form action='recebe.php' id="canti" target="mod" name='form1' method='post' enctype='multipart/form-data'>
 
-    <div id="gs">
-        <form action='recebe.php' target="mod" name='form1' method='post' enctype='multipart/form-data'>
         </form>
     </div>
 </div>
 </div>
+<a href="javascript:env()" id="c">Enviar form!</a>
 <a href="#modal" id="b">Abrir Modal</a>
+<!--- Janela Modal --->
 <div id="modal" class="janelaModal">
     <div>
         <a href="#fechar" title="Fechar" class="fechar">X</a>
@@ -151,6 +154,11 @@
 </div>
 </body>
 <script>
+    function env() {
+        document.form1.submit();
+
+    }
+
     function df() {
         document.getElementById('b').click();
     }
