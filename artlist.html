@@ -100,7 +100,7 @@
                         var musicas = [];
                         for(i=0;i< ly.length;i++){
 
-                            musicas.push("<input type='radio' class='let' onclick='sa()' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
+                            musicas.push("<input type='radio' class='let' onclick='sa();df()' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
 
                         }
                         $("<div/>",{"id":"playlist", html: musicas.join("") }).appendTo(".form");
@@ -136,7 +136,7 @@
 
 
     <div id="gs">
-        <form action='' name='form1' method='post' enctype='multipart/form-data'>
+        <form action='recebe.php' target="mod" name='form1' method='post' enctype='multipart/form-data'>
         </form>
     </div>
 </div>

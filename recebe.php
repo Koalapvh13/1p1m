@@ -27,11 +27,6 @@ $conta = count($letra)-1;*/
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .dada{
-            height: 800px;
-            width: 600px;
-            column-count: 1;
-        }
         div a img{
             display: none;
         }
@@ -42,7 +37,7 @@ $conta = count($letra)-1;*/
 
 
 echo "<h1>";
-echo $_POST['rad'];
+echo $_POST['lyri'];
 echo "</h1>";
 
 ?>
