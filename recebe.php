@@ -42,8 +42,8 @@ $json = json_decode($alb);
 $i=0;
 
     $aka = $json->mus[0]->text;
-
-$q = str_replace('<br/>',' ',$aka);
+$q = str_replace('\n',' ',$aka);
+$q = str_replace('<br/>',' ',$q);
 $a = array(",",".","!","?",";","(",")","...","\"","-","","  ");
 $q = str_replace($a," ",$q);
 $q = explode(' ',$q);

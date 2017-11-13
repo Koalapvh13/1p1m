@@ -100,7 +100,7 @@
                         var musicas = [];
                         for(i=0;i< ly.length;i++){
 
-                            musicas.push("<input type='radio' class='let' onclick='sa();df();env()' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
+                            musicas.push("<input type='radio' class='let' onclick='sa();df();' name='lyri' value='"+ ly[i].id +"'>"+ly[i].desc+"<br>");
 
                         }
                         $("<div/>",{"id":"playlist", html: musicas.join("") }).appendTo("#canti");
@@ -120,7 +120,12 @@
                         + "?musid=" + c,
                 function (data) {
                     // Letra da música
-                    alert(data.mus[0].text);
+                    var g = data.mus[0].text;
+                    var ds = g.replace(/\n/g," ");
+                    var arr = ds.split(" ");
+
+
+                    document.getElementById('gf').innerText= arr[0];
                 }
             );
 
@@ -149,7 +154,8 @@
     <div>
         <a href="#fechar" title="Fechar" class="fechar">X</a>
         <h2>Janela Modal</h2>
-        <iframe frameborder="none" name="mod"></iframe>
+        <p id="gf"></p>
+        <!--<iframe frameborder="none" name="mod"></iframe>-->
     </div>
 </div>
 </body>
