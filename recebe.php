@@ -34,7 +34,7 @@ $conta = count($letra)-1;*/
 </head>
 <body>
 <?php
-
+/*
 $str = $_POST['lyri'];
 
 $alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
@@ -47,9 +47,12 @@ $q = str_replace('<br/>',' ',$q);
 $a = array(",",".","!","?",";","(",")","...","\"","-","","  ");
 $q = str_replace($a," ",$q);
 $q = explode(' ',$q);
+*/
+if ($_POST){
+$a =$_POST['arry'];
+}else{
 
-echo '<pre>';
-print_r($q);
+}
 
 
 ?>
