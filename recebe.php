@@ -41,6 +41,7 @@ $alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
 $json = json_decode($alb);
 $i=0;
 
+<<<<<<< HEAD
     $aka = $json->mus[0]->text;
 $q = str_replace('\n',' ',$aka);
 $q = str_replace('<br/>',' ',$q);
@@ -53,6 +54,19 @@ $a =$_POST['arry'];
 }else{
 
 }
+=======
+$str = $_POST['lyri'];
+
+$alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
+$json = json_decode($alb);
+$i=0;
+
+    $aka = $json->mus[0]->text;
+
+
+
+echo $aka;
+>>>>>>> f26e28262d310e7c58d4869aaf80f714c8d4491c
 
 
 ?>
