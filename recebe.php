@@ -54,7 +54,7 @@ $a =$_POST['arry'];
 }else{
 
 }
-=======
+
 $str = $_POST['lyri'];
 
 $alb = file_get_contents("https://api.vagalume.com.br/search.php?musid=".$str);
@@ -66,7 +66,7 @@ $i=0;
 
 
 echo $aka;
->>>>>>> f26e28262d310e7c58d4869aaf80f714c8d4491c
+
 
 
 ?>
